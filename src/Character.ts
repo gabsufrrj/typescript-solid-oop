@@ -83,4 +83,13 @@ export default class Character implements Fighter {
 
     this._lifePoints = this._maxLifePoints;
   }
+
+  special(enemy: Fighter) {
+    const currStr = this._strength;
+    this._strength = 999999999999999;
+    const KAMEHAMEHA = this._strength;
+    console.log('KAAA-MEEE-HAA-MEEEE-HAAAA! RECEBA!!!!!!!!!!!!!!');
+    enemy.receiveDamage(KAMEHAMEHA);
+    this._strength = currStr;
+  }
 }
