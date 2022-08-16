@@ -3,6 +3,8 @@ import Character from './Character';
 import Dragon from './Dragon';
 import Monster from './Monster';
 
+console.log('Running');
+
 const player1 = new Character('Gabs');
 const player2 = new Character('Zumbão');
 const player3 = new Character('Lucão');
@@ -13,12 +15,15 @@ const monster1 = new Monster();
 const monster2 = new Dragon();
 
 const pvp = new PVP(player2, player3);
+console.log(pvp.fight());
 
 const pve = new PVE(player1, [monster1, monster2]);
+console.log(pve.fight());
 
 const runBattles = (battles: Battle[]): void => {
   battles.forEach((b) => b.fight());
 };
+
 
 export {
   player1,
